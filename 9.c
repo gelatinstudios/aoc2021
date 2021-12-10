@@ -4,8 +4,6 @@
 #include <string.h>
 #include <ctype.h>
 
-#define Maximum(a, b) ((a) > (b) ? (a) : (b))
-
 static unsigned char grid[128][128];
 static unsigned char marks[128][128];
 
