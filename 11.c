@@ -63,7 +63,7 @@ int main(void) {
         row_count++;
     }
     
-    for (int i = 0; ; i++) {
+    for (int step = 1; ; step++) {
         memset(flashed, 0, sizeof(flashed));
         for (int i = 1; i < row_count; i++) {
             for (int j = 0; j < column_count; j++) {
@@ -83,7 +83,7 @@ int main(void) {
             }
         }
         
-        if (i == 100) {
+        if (step == 100) {
             printf("%lld\n", flashes);
         }
         
@@ -98,7 +98,7 @@ int main(void) {
         }
         
         if (all_flashed) {
-            printf("%d\n", i+1);
+            printf("%d\n", step);
             break;
         }
     }
