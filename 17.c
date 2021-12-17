@@ -33,26 +33,9 @@ int main(void) {
     
     printf("%d\n", highest_y);
     
-    int min_idx = INT_MAX;
-    int max_idx = INT_MIN;
-    
-    for (int idx = 1; idx <= 1000; idx++) {
-        int dx = idx;
-        int x = 0;
-        while (x < min_x && dx > 0) {
-            x += dx;
-            if      (dx < 0) dx++;
-            else if (dx > 0) dx--;
-        }
-        if (x >= min_x && x <= max_x) {
-            if (idx < min_idx) min_idx = idx;
-            if (idx > max_idx) max_idx = idx;
-        }
-    } 
-    
     int count = 0;
     for (int idy = min_idy; idy <= max_idy; idy++) {
-        for (int idx = min_idx; idx <= max_idx; idx++) {
+        for (int idx = 1; idx <= 1000; idx++) {
             int x = 0;
             int y = 0;
             int dx = idx;
